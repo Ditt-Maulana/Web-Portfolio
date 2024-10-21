@@ -1,0 +1,341 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+nav {
+    background: transparent;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+nav.scrolled {
+    background: #333;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff5733; /* Warna saat hover */
+}
+
+/* Home Section */
+#home {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.typing-effect {
+    font-size: 20px;
+    margin: 10px 0;
+    animation: typing 4s steps(30, end) infinite;
+}
+
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+/* About Section */
+#about {
+    padding: 50px;
+    text-align: center;
+    background-color: #f0f4f8; /* Warna latar belakang yang lebih terang */
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.about-card {
+    background: white; /* Warna latar belakang card */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+    display: flex;
+    align-items: center;
+    padding: 20px; /* Padding di dalam card */
+    transition: transform 0.3s; /* Transisi saat hover */
+    max-width: 800px; /* Lebar maksimum untuk card */
+    width: 100%; /* Lebar penuh untuk responsivitas */
+}
+
+.about-card:hover {
+    transform: scale(1.02); /* Efek zoom saat hover */
+}
+
+.about-image {
+    width: 300px;
+    border-radius: 10px; /* Sudut melengkung */
+    margin-right: 20px;
+    transition: transform 0.3s; /* Transisi saat hover */
+}
+
+.about-image:hover {
+    transform: scale(1.05); /* Efek zoom pada gambar saat hover */
+}
+
+.about-description {
+    max-width: 500px; /* Lebar maksimum untuk deskripsi */
+    text-align: left; /* Rata kiri untuk teks */
+}
+
+.about-description h3 {
+    margin-top: 20px; /* Jarak atas untuk heading */
+    color: #ff5733; /* Warna heading */
+}
+
+.about-description ul {
+    list-style-type: none; /* Menghapus bullet point */
+    padding: 0; /* Menghapus padding */
+}
+
+.about-description ul li {
+    background: #eaeaea; /* Warna latar belakang untuk item list */
+    margin: 5px 0; /* Jarak antar item */
+    padding: 10px; /* Padding untuk item */
+    border-radius: 5px; /* Sudut melengkung */
+    transition: background 0.3s; /* Transisi saat hover */
+}
+
+.about-description ul li:hover {
+    background: #ff5733; /* Warna saat hover */
+    color: white; /* Warna teks saat hover */
+}
+
+/* Skills Section */
+#skills {
+    padding: 50px;
+    background-color: #333;
+    color: white;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-card {
+    background: #444;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.progress-bar {
+    background: #555;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress {
+    background: #ff5733;
+    height: 10px;
+    border-radius: 5px;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Membuat grid responsif */
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+    margin: 10px; /* Jarak antar proyek */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px;
+    background-color: #333;
+    color: white;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form input, #contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#contact-form button {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #e74c3c; /* Warna saat hover */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+}
+
+.social-card {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-card a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-card a:hover {
+    color: #ff5733; /* Warna saat hover */
+}
+
+/* Loading Animation */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Pastikan loading di atas semua konten */
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Tema Terang */
+body.light {
+    background-color: white;
+    color: black;
+}
+
+/* Tema Gelap */
+body.dark {
+    background-color: #121212;
+    color: white;
+}
+
+/* Gaya tambahan untuk elemen lain */
+.navbar.light {
+    background-color: #f0f0f0;
+}
+
+.navbar.dark {
+    background-color: #333;
+}
+
+/* Gaya untuk tombol tema */
+#navbar button {
+    margin-left: 20px; /* Jarak dari elemen lain */
+    padding: 5px 10px; /* Padding tombol */
+    cursor: pointer; /* Menunjukkan bahwa ini adalah tombol */
+}
+
+/* ... tambahkan gaya lainnya sesuai kebutuhan ... */
